@@ -1,4 +1,4 @@
-import type { Locator, Page } from '@playwright/test';
+import type { Locator, Page } from "@playwright/test";
 
 /**
  * The header is shown on every page after login, so it is a component
@@ -11,10 +11,10 @@ export class HeaderComponent {
   readonly logoutLink: Locator;
 
   constructor(page: Page) {
-    this.cartLink = page.getByTestId('shopping-cart-link');
-    this.cartBadge = page.getByTestId('shopping-cart-badge');
-    this.menuButton = page.getByRole('button', { name: 'Open Menu' });
-    this.logoutLink = page.getByRole('button', { name: 'Logout' });
+    this.cartLink = page.getByTestId("shopping-cart-link");
+    this.cartBadge = page.getByTestId("shopping-cart-badge");
+    this.menuButton = page.getByRole("button", { name: "Open Menu" });
+    this.logoutLink = page.getByRole("button", { name: "Logout" });
   }
 
   async openCart(): Promise<void> {

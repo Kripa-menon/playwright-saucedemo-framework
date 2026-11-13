@@ -1,5 +1,5 @@
-import type { Locator, Page } from '@playwright/test';
-import type { CustomerInfo } from '../data/customers';
+import type { Locator, Page } from "@playwright/test";
+import type { CustomerInfo } from "../data/customers";
 
 /** Checkout step one: "Checkout: Your Information". */
 export class CheckoutInfoPage {
@@ -13,12 +13,12 @@ export class CheckoutInfoPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.title = page.getByTestId('title');
-    this.firstNameInput = page.getByTestId('firstName');
-    this.lastNameInput = page.getByTestId('lastName');
-    this.postalCodeInput = page.getByTestId('postalCode');
-    this.continueButton = page.getByRole('button', { name: 'Continue' });
-    this.errorMessage = page.getByTestId('error');
+    this.title = page.getByTestId("title");
+    this.firstNameInput = page.getByTestId("firstName");
+    this.lastNameInput = page.getByTestId("lastName");
+    this.postalCodeInput = page.getByTestId("postalCode");
+    this.continueButton = page.getByRole("button", { name: "Continue" });
+    this.errorMessage = page.getByTestId("error");
   }
 
   async fillCustomerInfo(customer: CustomerInfo): Promise<void> {

@@ -1,4 +1,4 @@
-import type { Locator, Page } from '@playwright/test';
+import type { Locator, Page } from "@playwright/test";
 
 /** Final page: "Checkout: Complete!". */
 export class CheckoutCompletePage {
@@ -9,9 +9,9 @@ export class CheckoutCompletePage {
 
   constructor(page: Page) {
     this.page = page;
-    this.title = page.getByTestId('title');
-    this.completeHeader = page.getByTestId('complete-header');
-    this.backHomeButton = page.getByRole('button', { name: 'Back Home' });
+    this.title = page.getByTestId("title");
+    this.completeHeader = page.getByTestId("complete-header");
+    this.backHomeButton = page.getByRole("button", { name: "Back Home" });
   }
 
   async backHome(): Promise<void> {
